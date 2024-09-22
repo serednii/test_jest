@@ -1,10 +1,19 @@
 {
 
-  "homepage":"https://serednii.github.io/testweb",
-  "scripts":{
-      "deploy":"gh-pages -d dist"
+  "homepage": "https://serednii.github.io/testweb",
+
+  "scripts": {
+    "deploy": "gh-pages -d dist",
+    "test": "jest"
   },
+
   "devDependencies": {
-    "gh-pages": "^6.1.0"
+
+    "gh-pages": "^6.1.0",
+
+    "jest": "^29.7.0"
+
   }
+
 }
+
