@@ -8,7 +8,7 @@ on:
   # Add the `push` event, so that the workflow runs automatically every time a commit is pushed to a branch called `main`. For more information, see [`push`](/actions/using-workflows/events-that-trigger-workflows#push).
   push:
     branches:
-      - master
+      - testjest
   # Add the `pull_request` event, so that the workflow runs automatically every time a pull request is created or updated. For more information, see [`pull_request`](/actions/using-workflows/events-that-trigger-workflows#pull_request).
   pull_request:
 
@@ -52,71 +52,6 @@ jobs:
 
       - name: Run tests # Крок 4: запуск тестів
         run: npm run test
-# name: CI Pipeline
 
-# on:
-#   push:
-#     branches:
-#       - main
-#   pull_request:
-#     branches:
-#       - main
-#   workflow_dispatch: # Можливість запуску вручну
-
-# jobs:
-#   build-and-test:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       - name: Checkout code # Крок 1: завантаження коду репозиторію
-#         uses: actions/checkout@v4
-
-#       - name: Setup Node.js environment # Крок 2: налаштування Node.js середовища
-#         uses: actions/setup-node@v4
-#         with:
-#           node-version: "16.x"
-
-#       - name: Install dependencies # Встановлюємо залежності, якщо необхідно
-#         run: npm ci
-
-#       - name: Run tests # Крок 4: запуск тестів
-#         run: npm run test
-
-# # Ім'я вашого workflow
-# name: CI Pipeline
-
-# # Коли запускати цей workflow
-# on:
-#   push:
-#     branches:
-#       - main # Запуск при кожному push у гілку main
-#   pull_request:
-#     branches:
-#       - main # Запуск при створенні pull request в main
-#   workflow_dispatch: # Можливість запуску вручну
-
-# # Налаштування завдань (jobs)
-# jobs:
-#   # Ідентифікатор завдання
-#   build-and-test:
-#     # Яка операційна система використовуватиметься
-#     runs-on: ubuntu-latest
-
-#     # Кроки виконання завдання
-#     steps:
-#       - name: Checkout code # Крок 1: завантаження коду репозиторію
-#         uses: actions/checkout@v4
-
-#       - name: Setup Node.js environment # Крок 2: налаштування Node.js середовища
-#         uses: actions/setup-node@v4
-#         with:
-#           node-version: "16.x"
-
-#       - name: Install Jest globally (якщо необхідно)
-#         run: npm install -g jest
-
-#       - name: Run tests # Крок 4: запуск тестів
-#         run: npm run test
-
-#       # - name: Lint code # Крок 5: лінтинг коду
-#       #   run: npm run lint
+        - name: Lint code  # Крок 5: лінтинг коду
+        run: npm run lint
