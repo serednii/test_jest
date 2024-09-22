@@ -4,10 +4,30 @@ test('sum numbers 1,2,3 to equal 6', () => {
     expect(sum(1, 2, 3)).toBe(6);
 })
 
+
+const testList = [
+    {
+        in: "hello",
+        res: "olleh"
+    },
+    {
+        in: " marta ",
+        res: "atram"
+    },
+    {
+        in: " igor",
+        res: "rogi"
+    },
+    {
+        in: "list ",
+        res: "tsil"
+    },
+
+]
+
 test('rotate stirng', () => {
-    expect(rotateString("hello")).toBe("olleh")
-    expect(rotateString(" marta ")).toBe("atram")
-    expect(rotateString(" igor")).toBe("rogi")
-    expect(rotateString("list ")).toBe("tsil")
+    testList.forEach(test => {
+        expect(rotateString(test.in)).toBe(test.res)
+    })
 
 })
