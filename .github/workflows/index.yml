@@ -36,7 +36,3 @@ jobs:
 
       - name: Lint code # Крок 5: лінтинг коду
         run: npm run lint
-
-      - name: Deploy to GitHub Pages # Крок 6: деплой (наприклад, на GitHub Pages)
-        if: github.ref == 'refs/heads/main' # Деплой тільки при пуші в main
-        run: npm run deploy
