@@ -28,8 +28,8 @@ jobs:
         with:
           node-version: "16.x"
 
-      - name: Install dependencies # Крок 3: встановлення npm-залежностей
-        run: npm ci
+      - name: Install Jest globally (якщо необхідно)
+        run: npm install -g jest
 
       - name: Run tests # Крок 4: запуск тестів
         run: npm run test
