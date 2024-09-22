@@ -28,15 +28,15 @@ jobs:
         with:
           node-version: "16.x"
 
-      # - name: Install dependencies  # Крок 3: встановлення npm-залежностей
-      #   run: npm ci
+      - name: Install dependencies # Крок 3: встановлення npm-залежностей
+        run: npm ci
 
       - name: Run tests # Крок 4: запуск тестів
         run: npm run test
 
-      # - name: Lint code # Крок 5: лінтинг коду
-      #   run: npm run lint
+      - name: Lint code # Крок 5: лінтинг коду
+        run: npm run lint
 
-      # - name: Deploy to GitHub Pages # Крок 6: деплой (наприклад, на GitHub Pages)
-      #   if: github.ref == 'refs/heads/main' # Деплой тільки при пуші в main
-      #   run: npm run deploy
+      - name: Deploy to GitHub Pages # Крок 6: деплой (наприклад, на GitHub Pages)
+        if: github.ref == 'refs/heads/main' # Деплой тільки при пуші в main
+        run: npm run deploy
